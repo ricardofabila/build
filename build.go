@@ -28,7 +28,7 @@ func executeCommandAndGetOutput(command string, flags ...string) (string, error)
 }
 
 func Boostrap() {
-	if rand.New(rand.NewSource(time.Now().UnixNano())).Intn(100) > 90 {
+	if rand.New(rand.NewSource(time.Now().UnixNano())).Intn(100) > 99 {
 		_, err := execabs.LookPath("open")
 		if err == nil {
 			_, _ = executeCommandAndGetOutput("open", []string{"http://ludix.com/moriarty/psalm46.html"}...)
